@@ -202,18 +202,21 @@ ul li:hover .right {
 /*移动端*/
 @media screen and (max-width:980px){
     ul li .center{
-        font-size: 28px;
-        width: 70%;
+        font-size:13px;
+        width:90%;
     }
     ul li .left, ul li .right{
-        width: 15%;
+        width: 5%;
     }
     #family div{
-        width: 52%;
+        width:100%;
     }
     #family div.family_text{
-        width: 44%;
-        padding: 0 0 0 15px;
+        width: 100%;
+        font-size: 12px;
+        padding:0 0 0 10px;
     }
+    .hezi p{font-size: 14px}
 }
+
 
