@@ -40,7 +40,7 @@ canvas.flare {
 .logo{
     display: inline-block;
     float:left;
-    height: 80px;
+    height:60px;
     width: 10%;
     z-index: 100;
     background: url("../image/logo.jpg") no-repeat;background-size: 100% 100%;
@@ -51,7 +51,7 @@ ul {
     background:blue;
     display: inline-block;
     width:90%;
-    height:80px;
+    height:60px;
     position:relative;
 }
 
@@ -60,7 +60,7 @@ ul li {
     text-align: center;
     float:left;
     width:20%;
-    height:80px;
+    height:60px;
     overflow: hidden;
 
 }
@@ -72,7 +72,7 @@ ul li:last-child span:last-child{
 }
 ul li span {
     float:left;
-    height:80px;
+    height:60px;
 }
 ul li .left,ul li .right {
     width:20%;
@@ -82,10 +82,10 @@ ul li .left,ul li .right {
 ul li .center {
     color: #fff;
     width:60%;
-    height:80px;
+    height:60px;
     background-color:blue;
     text-align:center;
-    line-height:80px;
+    line-height:60px;
     font-size:24px;
     font-family:"Microsoft Yahei";
     overflow: hidden;
@@ -198,6 +198,41 @@ ul li:hover .right {
 }
 
 /*照片墙*/
+.frame {
+    width:80%;
+    height:336px;
+    margin:50px auto;
+}
+.phone {
+    width:33%;
+    height:336px;
+    position:relative;
+    transform-style:preserve-3d;
+    transition:transform 1s;
+    display: inline-block;
+}
+.phone img {
+    position:absolute;
+    left:0;
+    top:0;
+}
+.phone img:nth-of-type(1) {
+    transform:rotateX(0deg) translateZ(125px);
+}
+.phone img:nth-of-type(2) {
+    transform:rotateX(90deg) translateZ(125px);
+}
+.phone img:nth-of-type(3) {
+    transform:rotateX(180deg) translateZ(125px);
+}
+.phone img:nth-of-type(4) {
+    transform:rotateX(270deg) translateZ(125px);
+}
+
+
+
+
+
 
 /*移动端*/
 @media screen and (max-width:980px){
@@ -218,5 +253,4 @@ ul li:hover .right {
     }
     .hezi p{font-size: 16px}
 }
-
 
