@@ -128,6 +128,9 @@ ul li:hover .right {
 #family{
     margin: 0 auto;
 }
+#family div .phone{
+    width: 70%;
+}
 #family div{
     width: 40%;
     display: inline-block;
@@ -246,11 +249,15 @@ ul li:hover .right {
     #family div{
         width:100%;
     }
+    #family div.phone{
+        width: 100%;
+    }
     #family div.family_text{
         width: 100%;
         font-size: 12px;
         padding:0 0 0 10px;
     }
     .hezi p{font-size: 16px}
+
 }
 
