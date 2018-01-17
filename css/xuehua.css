@@ -147,7 +147,7 @@ ul li:hover .right {
     display: inline-block;
     color: #fff;
     padding: 0 20px;
-    line-height: 2.4rem;
+    line-height: 2rem;
 }
 #family .family_text h2{
     text-align: center;
@@ -256,6 +256,7 @@ ul li:hover .right {
         width: 100%;
         font-size: 12px;
         padding:0 0 0 10px;
+        line-height:2.4rem;
     }
     .hezi p{font-size: 16px}
 
