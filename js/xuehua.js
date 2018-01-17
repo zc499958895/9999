@@ -187,8 +187,8 @@ $(document).ready(function() {
 
 //    家族介绍图片与文本的高度
 $(function(){
-    var divH = $("#family div img").height();
+    var divH = $(".phone").height();
+    console.log(divH)
     $(".family_text").css("height",divH+"px");
 })
 
-//文字滚动轮播
