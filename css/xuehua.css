@@ -1,0 +1,199 @@
+*{
+    margin:0;
+    padding:0;
+}
+h1,h2,h3,h4,h5,h6,em,i {
+    font-weight:100;
+    font-style:normal;
+}
+ul,ol,li {
+    list-style-type:none;
+}
+a {
+    color:#666;
+    text-decoration:none;
+    outline:0;
+}
+a:hover {
+    text-decoration:none;
+}
+
+body {
+    background:#000;
+}
+.container{
+    width: 80%;
+}
+canvas {
+    z-index: -100;
+    display:block;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    position:fixed;
+}
+canvas.flare {
+    opacity:0.5;
+}
+
+.logo{
+    display: inline-block;
+    float:left;
+    height: 80px;
+    width: 10%;
+    z-index: 100;
+    background: url("../image/logo.jpg") no-repeat;background-size: 100% 100%;
+    border-radius:50%;
+}
+
+ul {
+    display: inline-block;
+    width:90%;
+    height:80px;
+    position:relative;
+}
+
+
+ul li {
+    text-align: center;
+    float:left;
+    width:20%;
+    height:80px;
+    overflow: hidden;
+
+}
+ul li:first-child span:first-child{
+    border-radius: 10px 0 0 10px;
+}
+ul li:last-child span:last-child{
+    border-radius: 0 8px 8px 0;
+}
+ul li span {
+    float:left;
+    height:80px;
+}
+ul li .left,ul li .right {
+    width:20%;
+    height:100%;
+    background-color:blue;
+}
+ul li .center {
+    color: #fff;
+    width:60%;
+    height:80px;
+    background-color:blue;
+    text-align:center;
+    line-height:80px;
+    font-size:24px;
+    font-family:"Microsoft Yahei";
+    overflow: hidden;
+
+}
+ul li .left{
+    transition: all 1s;
+}
+ul li .center{
+    transition: all 1.5s;
+}
+ul li .right{
+    transition: all 2s;
+}
+ul li:hover .left {
+    transform-origin:left;
+    background-color:red;
+
+}
+ul li:hover .center{
+    color: #E6B5B1;
+    transform: scale(1.2);
+}
+
+ul li:hover .right {
+    transform-origin:right;
+    background-color:orange;
+}
+/*轮播样式*/
+.swiper-container .swiper-wrapper div{
+    width: 100%;
+
+}
+.swiper-container .swiper-wrapper img{
+    width: 100%;
+    max-height: 800px;
+}
+
+/*家族介绍样式*/
+#family{
+    margin: 0 auto;
+}
+#family div{
+    width: 40%;
+    display: inline-block;
+    vertical-align: top;
+}
+#family div img{
+    width: 100%;
+}
+
+#family .family_text{
+    font-size: 18px;
+    overflow: hidden;
+    width: 50%;
+    display: inline-block;
+    color: #fff;
+    padding: 0 20px;
+    line-height: 2rem;
+}
+#family .family_text h2{
+    text-align: center;
+}
+#family .family_text a{
+    color: #fff;
+}
+
+
+/*文字滚动轮播*/
+#Text{
+    color: #fff;
+    width: 500px;
+    height: 300px;
+    border: 1px solid black;
+    position: relative; /*因为里面的ul需要移动，所以外面一定要设置为相对定位*/
+    overflow: hidden;   /*不显示超出div部分的内容*/
+    margin: 20px;
+}
+#Text ul{
+    list-style: none;
+    position: absolute; /*ul需要移动，必须使用绝对定位*/
+    top: 0;
+    left: 0;
+    padding: 0 0 0 20px;
+}
+#Text ul li{
+    height: 40px;
+    line-height: 40px;
+}
+.box{
+    width:80%;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    background: blue;
+    border: 2px solid yellow;
+    margin: 0px auto;
+    margin-top: 10px;
+    color: red;
+    position: relative;
+    overflow: hidden;
+}
+.hezi{
+    height:200px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    font-size: 24px;
+}
+
+/*照片墙*/

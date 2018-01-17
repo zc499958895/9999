@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/xuehua.css">
+    <link rel="stylesheet" href="css/swiper-3.4.2.min.css">
+    <script src="js/jquery-1.11.3.js"></script>
+    <script src="js/swiper-3.4.2.jquery.min.js"></script>
+    <script src="js/xuehua.js"></script>
+    <style type="text/css">
+        .box{
+            width:80%;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            background: blue;
+            border: 2px solid yellow;
+            margin: 0px auto;
+            margin-top: 10px;
+            color: red;
+            position: relative;
+            overflow: hidden;
+        }
+        .hezi{
+            height:200px;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            font-size: 24px;
+        }
+    </style>
+
+</head>
+<body>
+<canvas width="0" height="0 " class="flare"></canvas>
+<canvas width="100%" height="100%" class="snow"></canvas>
+<canvas width="100%" height="100%" class="flake"></canvas>
+
+<div  id="header">
+    <div class="logo">
+    </div>
+    <ul>
+
+        <li>
+            <span class="left"></span>
+            <span class="center">首页</span>
+            <span class="right"></span>
+        </li>
+        <li>
+            <span class="left"></span>
+            <span class="center">家庭成员</span>
+            <span class="right"></span>
+        </li>
+        <li>
+            <span class="left"></span>
+            <span class="center">家庭趣事</span>
+            <span class="right"></span>
+        </li>
+        <li>
+            <span class="left"></span>
+            <span class="center">精彩集锦</span>
+            <span class="right"></span>
+        </li>
+        <li>
+            <span class="left"></span>
+            <span class="center">关于赵氏</span>
+            <span class="right"></span>
+        </li>
+    </ul>
+</div>
+
+
+<!--首页轮播-->
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="image/z1.jpg" alt=""></div>
+        <div class="swiper-slide"><img src="image/z2.jpg" alt=""></div>
+        <div class="swiper-slide"><img src="image/z3.jpg" alt=""></div>
+        <div class="swiper-slide"><img src="image/z4.jpg" alt=""></div>
+        <div class="swiper-slide"><img src="image/z5.jpg" alt=""></div>
+
+    </div>
+    <!-- 如果需要分页器 -->
+    <div class="swiper-pagination"></div>
+</div>
+<script type="text/javascript">
+    var mySwiper = new Swiper('.swiper-container',{
+        loop: true,
+        autoplay: 4000,
+        pagination : '.swiper-pagination',
+        speed:500,
+    });
+</script>
+
+<!--家庭介绍-->
+<div id="family" class="container">
+    <div>
+        <img src="image/zt.jpg" alt="">
+    </div>
+    <div class="family_text">
+        <a href="">
+            <h2>赵氏家族简介</h2>
+
+            <p>一、姓氏源流 赵姓源出有四：</p>
+            <p>1、出自赢姓，始祖为造父。</p>
+            <p>2、以国为姓。造父的后代奄父，为周宣王御。</p>
+            <p>3、为少数民族姓氏。历史上少数民族亦有赵姓，如汉代有赵安稽（匈奴人），唐代有赵曳夫（“南蛮”人），等等。他们的后代都沿袭姓赵。</p>
+            <p>4、赵宋王朝赐姓。先后有李姓、穆姓、隆姓及宇文复姓的历史人物，赐姓赵氏。</p>
+            <p>二、历史名人:</p>
+            <p>赵 胜：战国时赵国贵族，又称平原君，战国四公子之一，以“食客数千人”而著 称。</p>
+            <p>赵 奢：战国时赵国名将，善用兵，因功封马服君。 赵 云：三国时蜀汉名将，河北正定人，曾以数十骑拒曹操大军，被誉为“一身是 胆”。</p>
+            <p>赵匡胤：后周名将，“陈桥兵变”后，代周为帝，建立宋朝，立国320年之久，使赵 姓的宗族声望达到了最为辉煌的时期。</p>
+            赵匡胤：后周名将，“陈桥兵变”后，代周为帝，建立宋朝，立国320年之久，使赵 姓的宗族声望达到了最为辉煌的时期。
+        </a>
+    </div>
+</div>
+<!--文字滚动轮播-->
+<div class="box">
+    <div class="hezi">
+        <p>2018.02.13  赵培新婚大喜</p>
+        <p>2018.02.13  新年初一</p>
+        <p>2018.02.04  2018年第一场雪</p>
+        <p>2018.02.13  赵培新婚大喜</p>
+    </div>
+
+</div>
+
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<script type="text/javascript">
+    $(function(){
+        var num=0;
+        setInterval(function(){
+            num++;
+            if(num==4){
+                $('.hezi').css({'top':'0px'});
+
+                num=1;
+            }
+            $('.hezi').stop().animate({'top':-50*num+'px'},1000)
+        },2500)
+    })
+</script>
+</body>
+</html>
