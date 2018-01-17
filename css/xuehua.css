@@ -48,6 +48,7 @@ canvas.flare {
 }
 
 ul {
+    background:blue;
     display: inline-block;
     width:90%;
     height:80px;
