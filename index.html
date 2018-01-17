@@ -12,6 +12,7 @@
     <script src="js/jquery-1.11.3.js"></script>
     <script src="js/swiper-3.4.2.jquery.min.js"></script>
     <script src="js/xuehua.js"></script>
+
 </head>
 <body>
 <canvas width="0" height="0 " class="flare"></canvas>
@@ -76,8 +77,13 @@
 
 <!--家庭介绍-->
 <div id="family" class="container">
-    <div>
-        <img src="image/zt.jpg" alt="">
+        <div class="frame" id="frame">
+            <div class="phone">
+                <img src="image/zt.jpg">
+                <img src="image/zt.jpg">
+                <img src="image/zt.jpg">
+                <img src="image/zt.jpg">
+            </div>
     </div>
     <div class="family_text">
         <a href="">
@@ -89,10 +95,8 @@
             <p>3、为少数民族姓氏。历史上少数民族亦有赵姓，如汉代有赵安稽（匈奴人），唐代有赵曳夫（“南蛮”人），等等。他们的后代都沿袭姓赵。</p>
             <p>4、赵宋王朝赐姓。先后有李姓、穆姓、隆姓及宇文复姓的历史人物，赐姓赵氏。</p>
             <p>二、历史名人:</p>
-            <p>赵 胜：战国时赵国贵族，又称平原君，战国四公子之一，以“食客数千人”而著 称。</p>
-            <p>赵 奢：战国时赵国名将，善用兵，因功封马服君。 赵 云：三国时蜀汉名将，河北正定人，曾以数十骑拒曹操大军，被誉为“一身是 胆”。</p>
-            <p>赵匡胤：后周名将，“陈桥兵变”后，代周为帝，建立宋朝，立国320年之久，使赵 姓的宗族声望达到了最为辉煌的时期。</p>
-            赵匡胤：后周名将，“陈桥兵变”后，代周为帝，建立宋朝，立国320年之久，使赵 姓的宗族声望达到了最为辉煌的时期。
+            <p><strong>赵 胜</strong>：战国时赵国贵族，又称平原君。<strong>赵 奢</strong>：战国时赵国名将，善用兵，因功封马服君。<strong>赵 云</strong>：三国时蜀汉名将。<strong>赵匡胤</strong>：后周名将，“陈桥兵变”后，代周为帝，建立宋朝。
+            </p>
         </a>
     </div>
 </div>
@@ -107,6 +111,8 @@
 
 </div>
 
+
+<!--照片墙-->
 
 <br/>
 <br/>
@@ -128,6 +134,28 @@
             $('.hezi').stop().animate({'top':-50*num+'px'},1000)
         },2500)
     })
+</script>
+
+<script>
+    // 照片墙
+    var f = document.querySelector("#frame");
+
+    var phone = document.querySelector(".phone");
+    var i = 0;
+    f.addEventListener("click", function() {
+        i++;
+        //给box绑定属性
+        phone.style.transform = "rotateX(" + i * 90 + "deg)";
+    });
+
+/*    var f = $("#frame");
+    var phone = $(".phone")
+    var i = 0;
+    $("phone").on('click',function () {
+        $(this).find("img").eq($(this).index()).css("transform","rotateX(" + i * 90 + "deg)");
+
+    });*/
+
 </script>
 </body>
 </html>
